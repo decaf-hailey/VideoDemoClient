@@ -4,18 +4,17 @@ gRPC Video Demo
 
 spec: SwiftUI, Combine, WebRTC, gRPC, Protobuf
 
-server: https://github.com/decaf-hailey/VideoDemoServer
- 
- 
+
  
  # 1. execute server
   - git clone --branch 2.0.0 https://github.com/grpc/grpc-swift
   - $ cd Example/v1/HelloWorld
   - $ PROTOC_PATH=$(which protoc) swift run HelloWorldServer  - port 1234
+  
    ## 1-1. server test
   - $ swift run HelloWorldClient {any name}
-    Build of product 'HelloWorldClient' complete! (5.06s)
-	Greeter received: Hello {name}!
+  - (logs) Build of product 'HelloWorldClient' complete! (5.06s)
+    Greeter received: Hello {name}!
 	
 	
  
