@@ -1,0 +1,29 @@
+#project
+.env
+*.xcconfig
+
+#rbenv
+.ruby-version
+
+# macOS & Xcode
+.DS_Store
+xcuserdata/
+**/xcuserdata/*
+*.swp
+*.lock
+
+# Xcode
+DerivedData/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# iOS Simulator
+Library/Developer/CoreSimulator/
+userdata/
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
