@@ -2,60 +2,73 @@
 //  ContentView.swift
 //  VideoDemoClient
 //
-//  Created by hailey on 9/27/25.
+//  Created by hailey on 9/28/25.
 //
 
 import SwiftUI
-import SwiftData
+import WebRTC
+import GRPCCore
+import NIO
+import SwiftProtobuf
+
+struct UIViewWrapper: UIViewRepresentable {
+    let uiView: UIView?
+
+    func makeUIView(context: Context) -> UIView {
+        return uiView ?? UIView()
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {
+    }
+}
+
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @StateObject private var client = WebRTCClient()
+    
+    private let clientId = UUID().uuidString
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        VStack {
+            
+            Text("Local Video")
+                .font(.headline)
+            UIViewWrapper(uiView: client.localVideoView)
+                .frame(height: 200)
+                .background(Color.black.opacity(0.1))
+                .cornerRadius(10)
+            
+            Text("Remote Video")
+                .font(.headline)
+                .padding(.top)
+            UIViewWrapper(uiView: client.remoteVideoView)
+                .frame(height: 200)
+                .background(Color.black.opacity(0.1))
+                .cornerRadius(10)
+            
+            HStack {
+                Button("Join Room") {
+                    Task {
+                        try await client.receiveMessages(clientId: clientId)
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                .padding()
+                
+                Button("Send Offer (Test)") {
+                    Task {
+                        let dummySdp = "v=0\no=- 0 0 IN IP4 0.0.0.0\r\ns=-\r\n..."
+                        try await client.sendOffer(sdp: dummySdp, clientId: clientId)
                     }
                 }
+                .padding()
             }
-        } detail: {
-            Text("Select an item")
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+        .padding()
+        .onAppear {
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

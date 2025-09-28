@@ -6,6 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D24083332E89D8DD00A4EAF9 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = D24083322E89D8DD00A4EAF9 /* WebRTC */; };
+		D24083532E89DE5900A4EAF9 /* GRPCCodeGen in Frameworks */ = {isa = PBXBuildFile; productRef = D24083522E89DE5900A4EAF9 /* GRPCCodeGen */; };
+		D24083552E89DE5900A4EAF9 /* GRPCCore in Frameworks */ = {isa = PBXBuildFile; productRef = D24083542E89DE5900A4EAF9 /* GRPCCore */; };
+		D24083572E89DE5900A4EAF9 /* GRPCInProcessTransport in Frameworks */ = {isa = PBXBuildFile; productRef = D24083562E89DE5900A4EAF9 /* GRPCInProcessTransport */; };
+		D240835A2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2 in Frameworks */ = {isa = PBXBuildFile; productRef = D24083592E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2 */; };
+		D240835C2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2Posix in Frameworks */ = {isa = PBXBuildFile; productRef = D240835B2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2Posix */; };
+		D240835E2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2TransportServices in Frameworks */ = {isa = PBXBuildFile; productRef = D240835D2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2TransportServices */; };
+		D24083612E89E00A00A4EAF9 /* GRPCProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = D24083602E89E00A00A4EAF9 /* GRPCProtobuf */; };
+		D27BCBE02E89CF6500AD204E /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = D27BCBDF2E89CF6500AD204E /* NIO */; };
+		D27BCBE22E89CF6500AD204E /* NIOConcurrencyHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = D27BCBE12E89CF6500AD204E /* NIOConcurrencyHelpers */; };
+		D27BCBE42E89CF6500AD204E /* NIOCore in Frameworks */ = {isa = PBXBuildFile; productRef = D27BCBE32E89CF6500AD204E /* NIOCore */; };
+		D27BCBE62E89CF6500AD204E /* NIOEmbedded in Frameworks */ = {isa = PBXBuildFile; productRef = D27BCBE52E89CF6500AD204E /* NIOEmbedded */; };
+		D27BCBE82E89CF6500AD204E /* NIOFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = D27BCBE72E89CF6500AD204E /* NIOFoundationCompat */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D28F11AD2E88C61B009DD4AF /* VideoDemoClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoDemoClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,16 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D240835E2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2TransportServices in Frameworks */,
+				D27BCBE22E89CF6500AD204E /* NIOConcurrencyHelpers in Frameworks */,
+				D24083332E89D8DD00A4EAF9 /* WebRTC in Frameworks */,
+				D27BCBE02E89CF6500AD204E /* NIO in Frameworks */,
+				D24083532E89DE5900A4EAF9 /* GRPCCodeGen in Frameworks */,
+				D27BCBE82E89CF6500AD204E /* NIOFoundationCompat in Frameworks */,
+				D24083612E89E00A00A4EAF9 /* GRPCProtobuf in Frameworks */,
+				D240835A2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2 in Frameworks */,
+				D27BCBE42E89CF6500AD204E /* NIOCore in Frameworks */,
+				D24083552E89DE5900A4EAF9 /* GRPCCore in Frameworks */,
+				D240835C2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2Posix in Frameworks */,
+				D24083572E89DE5900A4EAF9 /* GRPCInProcessTransport in Frameworks */,
+				D27BCBE62E89CF6500AD204E /* NIOEmbedded in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D27BCBE92E89CFB100AD204E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D28F11A42E88C61B009DD4AF = {
 			isa = PBXGroup;
 			children = (
 				D28F11AF2E88C61B009DD4AF /* VideoDemoClient */,
+				D27BCBE92E89CFB100AD204E /* Frameworks */,
 				D28F11AE2E88C61B009DD4AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +102,19 @@
 			);
 			name = VideoDemoClient;
 			packageProductDependencies = (
+				D27BCBDF2E89CF6500AD204E /* NIO */,
+				D27BCBE12E89CF6500AD204E /* NIOConcurrencyHelpers */,
+				D27BCBE32E89CF6500AD204E /* NIOCore */,
+				D27BCBE52E89CF6500AD204E /* NIOEmbedded */,
+				D27BCBE72E89CF6500AD204E /* NIOFoundationCompat */,
+				D24083322E89D8DD00A4EAF9 /* WebRTC */,
+				D24083522E89DE5900A4EAF9 /* GRPCCodeGen */,
+				D24083542E89DE5900A4EAF9 /* GRPCCore */,
+				D24083562E89DE5900A4EAF9 /* GRPCInProcessTransport */,
+				D24083592E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2 */,
+				D240835B2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2Posix */,
+				D240835D2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2TransportServices */,
+				D24083602E89E00A00A4EAF9 /* GRPCProtobuf */,
 			);
 			productName = VideoDemoClient;
 			productReference = D28F11AD2E88C61B009DD4AF /* VideoDemoClient.app */;
@@ -94,6 +144,13 @@
 			);
 			mainGroup = D28F11A42E88C61B009DD4AF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D27BCBDE2E89CF6500AD204E /* XCRemoteSwiftPackageReference "swift-nio" */,
+				D24083312E89D8DD00A4EAF9 /* XCRemoteSwiftPackageReference "WebRTC" */,
+				D24083512E89DE5900A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-2" */,
+				D24083582E89DE7700A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-nio-transport" */,
+				D240835F2E89E00A00A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-protobuf" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D28F11AE2E88C61B009DD4AF /* Products */;
 			projectDirPath = "";
@@ -324,6 +381,117 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D24083312E89D8DD00A4EAF9 /* XCRemoteSwiftPackageReference "WebRTC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stasel/WebRTC.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 140.0.0;
+			};
+		};
+		D24083512E89DE5900A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift-2.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+		D24083582E89DE7700A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-nio-transport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift-nio-transport.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		D240835F2E89E00A00A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift-protobuf";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+		D27BCBDE2E89CF6500AD204E /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.86.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D24083322E89D8DD00A4EAF9 /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D24083312E89D8DD00A4EAF9 /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
+		};
+		D24083522E89DE5900A4EAF9 /* GRPCCodeGen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D24083512E89DE5900A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-2" */;
+			productName = GRPCCodeGen;
+		};
+		D24083542E89DE5900A4EAF9 /* GRPCCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D24083512E89DE5900A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-2" */;
+			productName = GRPCCore;
+		};
+		D24083562E89DE5900A4EAF9 /* GRPCInProcessTransport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D24083512E89DE5900A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-2" */;
+			productName = GRPCInProcessTransport;
+		};
+		D24083592E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D24083582E89DE7700A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-nio-transport" */;
+			productName = GRPCNIOTransportHTTP2;
+		};
+		D240835B2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2Posix */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D24083582E89DE7700A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-nio-transport" */;
+			productName = GRPCNIOTransportHTTP2Posix;
+		};
+		D240835D2E89DE7700A4EAF9 /* GRPCNIOTransportHTTP2TransportServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D24083582E89DE7700A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-nio-transport" */;
+			productName = GRPCNIOTransportHTTP2TransportServices;
+		};
+		D24083602E89E00A00A4EAF9 /* GRPCProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D240835F2E89E00A00A4EAF9 /* XCRemoteSwiftPackageReference "grpc-swift-protobuf" */;
+			productName = GRPCProtobuf;
+		};
+		D27BCBDF2E89CF6500AD204E /* NIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D27BCBDE2E89CF6500AD204E /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+		D27BCBE12E89CF6500AD204E /* NIOConcurrencyHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D27BCBDE2E89CF6500AD204E /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOConcurrencyHelpers;
+		};
+		D27BCBE32E89CF6500AD204E /* NIOCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D27BCBDE2E89CF6500AD204E /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOCore;
+		};
+		D27BCBE52E89CF6500AD204E /* NIOEmbedded */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D27BCBDE2E89CF6500AD204E /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOEmbedded;
+		};
+		D27BCBE72E89CF6500AD204E /* NIOFoundationCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D27BCBDE2E89CF6500AD204E /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOFoundationCompat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D28F11A52E88C61B009DD4AF /* Project object */;
 }
